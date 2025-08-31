@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Edit Book</h1>
+    <form action="/edit/<%= book.id %>" method="POST">
+      <label>Title:</label><br />
+      <input
+        type="text"
+        name="title"
+        value="<%= book.title %>"
+        required
+      /><br /><br />
+
+      <label>Author:</label><br />
+      <input
+        type="text"
+        name="author"
+        value="<%= book.author %>"
+        required
+      /><br /><br />
+
+      <label>Notes:</label><br />
+      <textarea name="notes"><%= book.notes %></textarea><br /><br />
+
+      <label>Rating (0–10):</label><br />
+      <input
+        type="number"
+        name="rating"
+        min="0"
+        max="10"
+        value="<%= book.rating %>"
+        required
+      /><br /><br />
+
+      <label>Date Read:</label><br />
+      <input
+        type="date"
+        name="date_read"
+        value="<%= book.date_read.toISOString().split('T')[0] %>"
+        required
+      /><br /><br />
+
+      <button type="submit">Update Book</button>
+    </form>
+    <br />
+    <a href="/">Back to Home</a>
+  </body>
+</html>

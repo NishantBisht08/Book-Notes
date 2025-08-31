@@ -1,0 +1,156 @@
+/* Base Styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f5f2ef, #e9ddd4);
+  color: #2e2e2e;
+}
+
+/* Center Content */
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #1e1e1e;
+}
+
+/* Button Centering */
+.button-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Add Button Styling */
+.add-btn {
+  text-decoration: none;
+  background-color: #1cb5e0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #139fcb;
+}
+
+/* Book Card */
+.book-entry {
+  display: flex;
+  gap: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 25px;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.book-entry:hover {
+  transform: translateY(-4px);
+}
+
+/* Book Cover */
+.book-cover {
+  width: 130px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Book Info */
+.book-info h2 {
+  margin-top: 0;
+  color: #2d2d2d;
+}
+
+.book-info h2 small {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #666;
+}
+
+.book-info p {
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+/* Remove Underlines */
+a {
+  text-decoration: none;
+}
+.book-form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.book-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.book-form input,
+.book-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.book-form input:focus,
+.book-form textarea:focus {
+  border-color: #1cb5e0;
+  outline: none;
+  box-shadow: 0 0 5px rgba(28, 181, 224, 0.4);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #1cb5e0;
+  font-weight: bold;
+  transition: color 0.2s ease-in;
+}
+
+.back-link:hover {
+  color: #139fcb;
+}
+
+.cancel-btn {
+  margin-left: 10px;
+  color: #555;
+  text-decoration: underline;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
