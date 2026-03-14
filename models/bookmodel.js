@@ -14,6 +14,7 @@ const db = new pg.Client({
 });
 
 db.connect();
+export default db;
 
 export async function getAllBooks() {
   try {
