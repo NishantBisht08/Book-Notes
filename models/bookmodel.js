@@ -26,7 +26,7 @@ const db = new Client({
   }
 });
 
-await db.connect();
+
 
 
 
