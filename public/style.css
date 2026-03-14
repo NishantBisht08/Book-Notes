@@ -3,7 +3,11 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #f5f2ef, #e9ddd4);
+
+  background:
+    url("https://www.transparenttextures.com/patterns/axiom-pattern.png"),
+    linear-gradient(to right, #f5f2ef, #e9ddd4);
+
   color: #2e2e2e;
 }
 
