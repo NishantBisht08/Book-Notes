@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import bodyParser from "body-parser";
 import {
   getAllBooks,
@@ -33,11 +33,18 @@ export const handleNewBook = async (req, res) => {
       req.body.title
     )}&author=${encodeURIComponent(req.body.author)}`;
 
-    const response = await axios.get(apiURL);
+    // const response = await axios.get(apiURL);
+
+    // let coverId = null;
+    // if (response.data.docs.length > 0 && response.data.docs[0].cover_i) {
+    //   coverId = response.data.docs[0].cover_i;
+    // }
+    const response = await fetch(apiURL);
+    const data = await response.json();
 
     let coverId = null;
-    if (response.data.docs.length > 0 && response.data.docs[0].cover_i) {
-      coverId = response.data.docs[0].cover_i;
+    if (data.docs.length > 0 && data.docs[0].cover_i) {
+      coverId = data.docs[0].cover_i;
     }
 
     /***await db.query(
