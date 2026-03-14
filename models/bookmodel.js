@@ -1,10 +1,10 @@
 import pg from "pg";
 import dotenv from "dotenv";
-import express from "express";
+// import express from "express";
 
-dotenv.config();
-const app = express();
-const port = 3000;
+// dotenv.config();
+// const app = express();
+// const port = 3000;
 
 // const db = new pg.Client({
 //   user: process.env.DB_USER,
@@ -28,7 +28,6 @@ const db = new Client({
 
 await db.connect();
 
-export default db;
 
 
 export async function getAllBooks() {
