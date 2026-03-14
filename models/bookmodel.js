@@ -6,15 +6,30 @@ dotenv.config();
 const app = express();
 const port = 3000;
 
-const db = new pg.Client({
+// const db = new pg.Client({
+//   user: process.env.DB_USER,
+//   host: process.env.DB_HOST,
+//   database: process.env.DB_NAME,
+//   password: process.env.DB_PASSWORD,
+//   port: process.env.DB_PORT,
+// });
+//db.connect();
+
+dotenv.config();
+
+const { Client } = pg;
+
+const db = new Client({
   connectionString: process.env.DATABASE_URL,
   ssl: {
-    rejectUnauthorized: false,
-  },
+    rejectUnauthorized: false
+  }
 });
 
-db.connect();
+await db.connect();
+
 export default db;
+
 
 export async function getAllBooks() {
   try {
