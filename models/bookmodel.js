@@ -1,10 +1,9 @@
 import pg from "pg";
 import dotenv from "dotenv";
-// import express from "express";
+import axios from "axios";
 
-// dotenv.config();
-// const app = express();
-// const port = 3000;
+
+dotenv.config();
 
 // const db = new pg.Client({
 //   user: process.env.DB_USER,
@@ -13,22 +12,13 @@ import dotenv from "dotenv";
 //   password: process.env.DB_PASSWORD,
 //   port: process.env.DB_PORT,
 // });
-//db.connect();
-
-dotenv.config();
-
-const { Client } = pg;
-
-const db = new Client({
+const db = new pg.Client({
   connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false
   }
 });
-
-
-
-
+db.connect();
 
 export async function getAllBooks() {
   try {

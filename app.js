@@ -10,8 +10,7 @@ import {
 } from "./controllers/bookcontroller.js";
 
 const app = express();
-const port = 3000;    
-
+const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
@@ -27,8 +26,6 @@ app.post("/edit/:id", handleEditedBook);
 
 app.post("/delete/:id", handleDeleteBook);
 
-// app.listen(port, () => {
-//   console.log(`Example app listening on port ${port}`);
-// });
-//Vercel runs serverless functions, so Express must be exported as a module instead of listening on a port directly. Vercel will handle the routing and invocation of the Express app.
-export default app;
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});

@@ -34,7 +34,7 @@ export const handleNewBook = async (req, res) => {
     )}&author=${encodeURIComponent(req.body.author)}`;
 
     const response = await axios.get(apiURL);
-    
+
     let coverId = null;
     if (response.data.docs.length > 0 && response.data.docs[0].cover_i) {
       coverId = response.data.docs[0].cover_i;
