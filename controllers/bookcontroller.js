@@ -1,5 +1,4 @@
 
-import bodyParser from "body-parser";
 import {
   getAllBooks,
   addBook,
